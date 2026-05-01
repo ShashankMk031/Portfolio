@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#09090b] text-zinc-100 antialiased;
+    background-image:
+      radial-gradient(circle at top, rgba(255, 255, 255, 0.07), transparent 28%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 18%);
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+@layer utilities {
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
